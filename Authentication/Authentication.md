@@ -26,12 +26,12 @@ ___
     - Status codes
     - Error messages
     - Response times
-- Flawed brute-force protection
-  - 2 cách phổ biến ngăn chặn brute-force
-    - khóa tài khoản mà người dùng từ xa đang cố đăng nhập quá nhiều lần không thành công
-    - chặn địa chỉ IP của người dùng từ xa nếu thực hiện nhiều lần liên tục
-  - Account locking
-  - User rate limiting
+  - Flawed brute-force protection
+    - 2 cách phổ biến ngăn chặn brute-force
+      - khóa tài khoản mà người dùng từ xa đang cố đăng nhập quá nhiều lần không thành công
+      - chặn địa chỉ IP của người dùng từ xa nếu thực hiện nhiều lần liên tục
+    - Account locking
+    - User rate limiting
 - HTTP basic authentication
 ___
 # ***6. Ngăn chặn***
