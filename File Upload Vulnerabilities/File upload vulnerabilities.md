@@ -21,4 +21,4 @@ Nếu bạn có thể tải lên thành công một web shell, bạn có toàn q
 
 3.2.5. Khai thác các điều kiện tải lên tệp (Race conditions)
 
-## **_4. Phòng chống_**
+# **_4. Phòng chống_**
