@@ -62,10 +62,30 @@ Chú ý response trả về `The file avatars/port.php has been uploaded.`
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/5e459e5d-0fcb-40ac-ad07-2dfacc9ab726)
 `Sorry, only JPG & PNG files are allowed Sorry, there was an error uploading your file.`
-![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/be47777d-299a-4483-8223-590f7ed8984d)
-![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/cc8c8252-3442-4e95-a935-b679d579cd6c)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/ea57f6cd-b04d-47fd-83bb-13631f25b565)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/2109e718-05f8-4a31-94f9-92c217d348e8)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/579e0bac-5846-479b-9dde-250c2ddc5515)
 
-![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/92ee7454-033e-45df-ba0a-444d1163ef33)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/511dacf8-8038-4966-b58d-5bccd5ec09f9)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/d340835c-f930-4c08-b18c-07e6d63017a8)
 
-![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/db743e05-6d63-46f5-b5f0-ec4b1cdc7509)
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/675c8edf-4984-4d1f-8613-ab82f92ec371)
+
+# [Lab 6: Remote code execution via polyglot web shell upload](https://portswigger.net/web-security/file-upload/lab-file-upload-remote-code-execution-via-polyglot-web-shell-upload)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/60e9b802-1fd3-41f6-a821-a0f6f26cd8ef)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/ee320df2-1263-44e6-b504-537c66cc33bd)
+
+`Error: file is not a valid image Sorry, there was an error uploading your file.`
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/16db9388-933c-4ef3-a8b0-fd86648d57a3)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/a17f040e-0621-42f9-86ba-138c63dfe613)
+Nếu không sử dụng công cụ mà tự sửa ảnh
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/c1cd834e-6e17-4502-8d96-48681675959c)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/84191b4d-6e6b-4cff-ac1c-5fb8384dd6fe)
+vẫn ok, tuy nhiên có những trường hợp sẽ khiến file lỗi và không thể thực thi, nên sử dụng công cụ để đảm bảo chính xác
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/6b10ec9e-c136-420e-96d0-ca41093b9015)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/fbd51740-d168-4456-9f96-26cfa3f79b32)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8b00cd40-e8d8-4eaa-bca2-b29825b9c2b4)
+submit and solve the lab
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/a6059f72-a8c5-427e-a10b-231e162ff8a2)
