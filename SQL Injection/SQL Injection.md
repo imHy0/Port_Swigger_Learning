@@ -29,3 +29,12 @@
 - Xác định số cột (lab 7)
 - Tìm data (lab 8, 9)
 - Truy xuất nhiều giá trị trong 1 cột (lab 10)
+### [5.4. Blind SQLi](part4.md)
+- **Blind SQLi**__ là gì?
+- Khai thác bằng cách kích hoạt các phản hồi có điều kiện (lab 11)
+- Error-based
+  - Khai thác bằng cách kích hoạt các lỗi có điều kiện (lab 12)
+  - Trích xuất dữ liệu nhạy cảm thông qua các thông báo lỗi SQL dài dòng (lab 13)
+- Khai thác tính năng chèn SQL mù bằng cách kích hoạt độ trễ thời gian (lab 14, 15)
+- OOB (lab 16, 17)
+### SQLi in different contexts (lab 18)
