@@ -19,6 +19,6 @@ Nếu bạn có thể tải lên thành công một web shell, bạn có toàn q
 
 3.2.4. Xác thực sai sót nội dung của tập tin
 
-3.2.5. Khai thác các điều kiện tải lên tệp (Race conditions)
+3.2.5. Khai thác các điều kiện tải lên tệp (Race conditions) **[EXPERT]**
 
 # **_4. Phòng chống_**
