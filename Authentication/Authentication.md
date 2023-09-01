@@ -33,6 +33,11 @@ ___
     - Account locking
     - User rate limiting
 - HTTP basic authentication
+
+[5.2. Lỗ hổng trong xác thực đa yếu tố](part2.md)
+
+[5.3. Lỗ hổng trong các cơ chế xác thực khác](part3.md)
+
 ___
 # ***6. Ngăn chặn***
 - Sử dụng Captcha cho tất cả Form
