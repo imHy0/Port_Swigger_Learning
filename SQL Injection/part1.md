@@ -18,3 +18,22 @@ Sau khi đã xác định lỗi SQLi, ta sẽ truy xuất các dữ liệu ẩn 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/40bddce4-38c0-4291-82a7-3b2763640422)
 solve the lab
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/c41e576e-bc25-49dd-88c7-61cca77dc9da)
+
+# [Lab 2: SQL injection vulnerability allowing login bypass](https://portswigger.net/web-security/sql-injection/lab-login-bypass)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/418ff7fc-9e31-498c-9eba-1245829a8241)
+
+Đây là trang web chính của bài lab, ta thấy các chức năng
+- Home
+- View details
+- My account: thông tin tài khoản
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/242b1ee8-52e8-42ec-b2fb-6679b27bd7a2)
+
+Go to `My account`, đây là function chứa lỗi SQLi, ta sẽ tìm cách login vào tài khoản `administrator` mà không cần password
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/d8c82073-620d-4339-ba9e-05aa76efc05e)
+`'` để đóng chuỗi username lại và thêm -- để comment phần passsword ở sau trong câu lệnh query nên ta chỉ cần nhập 1 password bất kỳ (do web bắt buộc ta nhập) thì đều login thành công
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/cc95b471-e0ee-40b6-8f53-27adb470bfe7)
+solve the lab
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/54cea845-407d-4586-ab27-3da46eca2210)
