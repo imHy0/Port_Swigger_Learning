@@ -22,3 +22,8 @@ Nếu bạn có thể tải lên thành công một web shell, bạn có toàn q
 3.2.5. Khai thác các điều kiện tải lên tệp (Race conditions) **[EXPERT]**
 
 # **_4. Phòng chống_**
+* Kiểm tra file extension dựa trên whitelist thay vì blacklist. Việc đoán những tiện ích mở rộng nào bạn có thể muốn cho phép sẽ dễ dàng hơn nhiều so với việc đoán những tiện ích mở rộng nào mà kẻ tấn công có thể cố tải lên.
+* Đảm bảo tên tệp không chứa bất kỳ chuỗi con nào có thể được hiểu là một thư mục hoặc một chuỗi truyền tải ( ../).
+* Đổi tên các file đã tải lên để tránh xung đột có thể khiến các file hiện có bị ghi đè.
+* Không tải tệp lên hệ thống tệp cố định của máy chủ cho đến khi chúng được xác thực đầy đủ.
+* Càng nhiều càng tốt, hãy sử dụng một khung đã được thiết lập để xử lý trước các tệp tải lên thay vì cố gắng viết các cơ chế xác thực của riêng bạn.
