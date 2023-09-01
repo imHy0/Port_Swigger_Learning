@@ -13,4 +13,12 @@ Nếu bạn có thể tải lên thành công một web shell, bạn có toàn q
 
 3.2.2. Ngăn chặn việc thực thi tệp trong các thư mục mà người dùng có thể truy cập
 
+3.2.3. Danh sách đen không đầy đủ các loại tệp nguy hiểm
+* Ghi đè cấu hình máy chủ
+* Làm xáo trộn phần mở rộng tập tin
 
+3.2.4. Xác thực sai sót nội dung của tập tin
+
+3.2.5. Khai thác các điều kiện tải lên tệp (Race conditions)
+
+## **_4. Phòng chống_**
