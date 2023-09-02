@@ -54,8 +54,57 @@ tìm từng ký tự thôi
 login and solve the lab
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/a3a65d89-e1aa-4416-8a6b-105aa9245a56)
 
-# [Lab 12: Blind SQLi with conditional errors]()
+# [Lab 12: Blind SQLi with conditional errors](https://portswigger.net/web-security/sql-injection/blind/lab-conditional-errors)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/2736db9b-e388-4209-9b5a-a4dc410315e7)
 
+Đây là trang web chính của bài lab, ta dễ thấy có các chức năng
+- Filter: lọc các kết quả của tìm kiếm search
+- View details: xem chi tiết sản phẩm
+- My account: login và profile của account đăng nhập
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/84eab554-6793-4824-9bf1-2e0ddf976371)
+
+Khi test các chức năng, ta không phát hiện ra lỗi SQLi, tuy nhiên khi thử ở biến TrackingId ở cookie thì ta phát hiện lỗi SQLi
+- Khi ta thêm ký tự `'` thì đã thấy xuất hiện lỗi không thể duyệt web
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/88d76f57-aefd-4352-86a1-4ffe77f79458)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/02a0a29c-d280-4252-9040-3302e01ea51d)
+
+Tuy nhiên khi thêm `'` thì lại duyệt web bình thường
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8d7fa086-cf4c-416a-93e7-8f38dbd407b9)
+
+Tiếp theo cần xác định xem
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/dc845b96-4ef0-4598-b9f6-27746c14769c)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/7c39b315-5945-4e7d-b7ea-fc08112bd9b7)
+→ duyệt web bình thường → Database: Oracle
+→ sử dụng payload: CASE WHEN → sau khi test → payload thỏa mãn là: `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN TO_CHAR(1/0) ELSE NULL END FROM dual`
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/e20992d2-0dcb-4ad0-943c-db746e8ab101)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/7145bb9a-dae6-4daa-9fe3-b8f1b05c18de)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/e526b059-fd16-43d0-8cd5-cb40b4690133)
+duyệt web bình thường
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/486a0144-7108-46aa-8588-788667f3fd57)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/021bb699-4f42-4b90-96ef-bb587b27cf2a)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/b80569b9-42dd-4c6b-8e2a-65de10918afc)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8c98a14a-ce3e-4b78-9fe6-d042467d4dfc)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/1a163de3-7e68-4395-acc0-df49b29f068c)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/f9e40d0a-f174-4fe8-ae34-69261746fba6)
+→ pass 20 ký tự
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/994ab2c3-7fff-48b5-ae35-e89e1d071341)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/1e79cc37-be96-40b5-8be0-ae80344233b7)
+
+→ password là 76xkww0jnumpa206hw9b
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/ce347165-3963-44c2-b6b6-123bec6d2533)
 
 # [Lab 13: Visible error-based SQLi]()
 
