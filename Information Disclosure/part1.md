@@ -123,4 +123,35 @@ Cách 2:
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/ce79d030-214a-4db3-89f7-ce42876592df)
 
-# []()
+# [Lab 5: Information disclosure in version control history](https://portswigger.net/web-security/information-disclosure/exploiting/lab-infoleak-in-version-control-history)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/4f8ae473-ec3b-4a34-9ce4-dafe94768623)
+
+dirsearch
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/6d618f90-bd7c-4b96-8678-4e9bc19abc4f)
+
+sử dụng githack
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/c7128875-e801-4e6d-81ae-5bd6920c7048)
+
+ta thấy có hành động gì đó đối với admin password
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/de3b98aa-0809-4505-bc81-1b43d445752e)
+
+tải hết file của trang web về
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8c23d8b0-a495-4b72-bf75-b4e4bbb5a862)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/56d896e1-1087-40be-baad-26f06741a7da)
+
+xem log để coi lịch sử chỉnh sửa: `Remove admin password from config`
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/63ea2225-c0bd-4561-b1d6-603685fd50d5)
+
+coi cụ thể log này xem nó remove gì
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8bc5c7d1-1204-4f1d-a911-44c795d98ba0)
+
+→ get pass → login → delete user carlos → solve the lab
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/25e6995f-fafa-4064-8562-c5a2c598e98b)
