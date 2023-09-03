@@ -7,7 +7,7 @@ ___
 Completed 13/14 labs
 ___
 ### [**3. Directory Traversal (6 labs)**](/Directory%20Traversal)
-Completed all labs
+
 ___
 ### [**4. Command Injection (5 labs)**](/Command%20Injection)
 Completed all labs
