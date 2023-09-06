@@ -65,7 +65,8 @@ solve the lab
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/12c9d1da-4a16-43e0-b103-5cc363ac7cac)
 
-## [Lab: JWT authentication bypass via weak signing key](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-signing-key)
+## [Lab 3: JWT authentication bypass via weak signing key](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-signing-key)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8803fc6d-e66a-4305-a5ed-15ac6ef1b9c1)
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/3370e639-2cc6-4de2-bd8a-a0f0a7f588b0)
 
