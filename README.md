@@ -24,3 +24,11 @@ ___
 Completed 6/7 labs
 ___
 ### [**11. XXE Injection (9 labs)**](./XXE%20Injection)
+
+
+___
+
+### [**25. JWT attacks (8 labs)**](./JWT%20Attacks)
+
+Completed
+___
