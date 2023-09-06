@@ -47,3 +47,8 @@
   - sử dụng hashcat (lab 3)
     - Bạn chỉ cần một JWT hợp lệ, có chữ ký từ máy chủ mục tiêu và một danh sách từ gồm những bí mật nổi tiếng. Sau đó, bạn có thể chạy lệnh sau, chuyển JWT và danh sách từ làm đối số: `hashcat -a 0 -m 16500 <jwt> <wordlist>`
     - Hashcat ký tiêu đề và tải trọng từ JWT bằng cách sử dụng từng bí mật trong danh sách từ, sau đó so sánh chữ ký thu được với chữ ký gốc từ máy chủ. Nếu bất kỳ chữ ký nào trùng khớp, hashcat sẽ xuất ra bí mật đã xác định ở định dạng sau, cùng với nhiều chi tiết khác: `<jwt>:<identified-secret>`
+
+- JWT header parameter injections
+  - Injecting self-signed JWTs via the `jwk` parameter (lab 4)
+    - `jwk` (JSON Web Key) - Cung cấp một đối tượng JSON được nhúng đại diện cho khóa.
+    - 
