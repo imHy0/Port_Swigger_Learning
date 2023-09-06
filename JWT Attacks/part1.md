@@ -101,3 +101,6 @@ key: secret1
 solve the lab
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/0b0ed929-9373-4ade-a947-a3b6c765365a)
+
+## [Lab 4: JWT authentication bypass via jwk header injection](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-jwk-header-injection)
+
