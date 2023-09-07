@@ -1,4 +1,4 @@
-## **_1. Định nghĩa_**
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/2325e21c-0e00-4279-ae50-56494af3d781)## **_1. Định nghĩa_**
 
 - **Access control (hoặc Authorization)** là việc áp dụng các ràng buộc về ai (hoặc cái gì) có thể thực hiện các hành động đã cố gắng hoặc truy cập tài nguyên mà họ đã yêu cầu. Trong ngữ cảnh của ứng dụng web, kiểm soát truy cập phụ thuộc vào xác thực và quản lý phiên:
   - Xác thực xác định người dùng và xác nhận rằng họ đúng như họ nói.
@@ -32,4 +32,27 @@ quyền.
 
 - Kiểm soát truy cập bị hỏng do cấu hình sai nền tảng (lab 5, 6)
 
-2.2. 
+2.2. Leo thang đặc quyền theo chiều ngang: khi một người dùng có quyền truy cập vào các tài nguyên của người khác (ngang hàng với họ)
+
+(lab 7, 8, 9)
+
+2.3. Leo thang đặc quyền theo chiều ngang sang chiều dọc (lab 10)
+
+2.4. Insecure direct object references (IDOR) (lab 11)
+
+- IDOR phát sinh khi một ứng dụng sử dụng đầu vào do người dùng cung cấp để truy cập trực tiếp vào các đối tượng và kẻ tấn công có thể sửa đổi đầu vào để có được quyền truy cập trái phép.
+
+2.5. Lỗ hổng Access control trong quy trình nhiều bước (lab 12)
+
+Nhiều trang web thực hiện các chức năng quan trọng qua một loạt các bước. Điều này thường được thực hiện khi cần nắm bắt nhiều đầu vào hoặc tùy chọn khác nhau hoặc khi người dùng cần xem lại và xác nhận chi tiết trước khi thực hiện hành động. Ví dụ: chức năng quản trị để cập nhật thông tin người dùng có thể bao gồm các bước sau:
+
+  1. Tải biểu mẫu chứa thông tin chi tiết cho một người dùng cụ thể.
+  
+  2. Gửi thay đổi.
+  
+  3. Xem lại các thay đổi và xác nhận.
+
+Đôi khi, một trang web sẽ triển khai các biện pháp kiểm soát truy cập nghiêm ngặt đối với một số bước này nhưng lại bỏ qua các bước khác. Ví dụ: giả sử các biện pháp kiểm soát quyền truy cập được áp dụng chính xác cho bước đầu tiên và bước thứ hai nhưng không áp dụng được cho bước thứ ba. Trên thực tế, trang web giả định rằng người dùng sẽ chỉ đạt đến bước 3 nếu họ đã hoàn thành các bước đầu tiên được kiểm soát đúng cách. Tại đây, kẻ tấn công có thể truy cập trái phép vào chức năng bằng cách bỏ qua hai bước đầu tiên và trực tiếp gửi yêu cầu cho bước thứ ba với các tham số được yêu cầu.
+
+2.6. Referer-based access control (lab 13)
+
