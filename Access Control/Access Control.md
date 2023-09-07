@@ -17,7 +17,7 @@ tài khoản của họ chứ không phải từ một người khác.
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/ee1f8fd1-34a7-4918-a683-1d9df9c3ae94)
 
-## **_2. Broken Access Control_**
+## [**_2. Broken Access Control_**](part1.md)
 
 2.1. Leo thang đặc quyền theo chiều dọc: người dùng có quyền truy cập vào chức năng mà học không được phép truy cập
 
