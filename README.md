@@ -19,6 +19,7 @@ ___
 Completed all labs
 ___
 ### [**7. Access Control (13 labs)**](/Access%20Control)
+Completed 11/13 labs
 ___
 ### [**8. File Upload Vulnerabilities (7 labs)**](./File%20Upload%20Vulnerabilities)
 Completed 6/7 labs
