@@ -1,4 +1,4 @@
-![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/2325e21c-0e00-4279-ae50-56494af3d781)## **_1. Định nghĩa_**
+## **_1. Định nghĩa_**
 
 - **Access control (hoặc Authorization)** là việc áp dụng các ràng buộc về ai (hoặc cái gì) có thể thực hiện các hành động đã cố gắng hoặc truy cập tài nguyên mà họ đã yêu cầu. Trong ngữ cảnh của ứng dụng web, kiểm soát truy cập phụ thuộc vào xác thực và quản lý phiên:
   - Xác thực xác định người dùng và xác nhận rằng họ đúng như họ nói.
@@ -56,3 +56,47 @@ Nhiều trang web thực hiện các chức năng quan trọng qua một loạt 
 
 2.6. Referer-based access control (lab 13)
 
+## **_3. How to test_**
+- Tạo tài khoản
+  - Tạo hai tài khoản ngang hàng
+  - Tạo hai tài khoản ở cấp độ khác nhau 
+- Khám phá tính năng mới
+  - Tập trung vào các Function trả về dữ liệu nhạy cảm 
+  - Tập trung vào các Function mà có thể sửa lại dữ liệu
+- Thay đổi các tham số và quan sát
+  - Thay đổi ID theo các logic về Access Control
+  - Nếu ID mã hoá thì thử giải mã, nếu không giải được thì bỏ qua
+  - Nếu ID sửa mà báo lỗi thì tìm cách Bypass
+  - Nếu ID không đoán được thì tìm xem ID đó có thể rò rỉ ra thứ gì đó không
+- Sử dụng bảng Authentications Matrix Tables
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/9241ab78-8fb1-413f-809d-9939da8e1784)
+
+- Đối với các Website có sử dụng Cookie, JWT, API Keys, Tokens để phục vụ cho việc xác thực. 
+  - Đăng nhập vào website bằng một user bình thường, có mức phân quyền thấp
+  - Thay thế cái Token của user cấp thấp để thực hiện các Request của user có quyền cao
+  - Kiểm tra và so sánh Response trả về
+- Tìm hiểu ID được tạo ra như nào
+  - Số tự nhiên hay tuân theo một thuật toán, quy luật nào đó
+- Mỗi khi thấy một giá trị ID trong endpoint, ví dụ /api/user/<ID>/news, /api/user/<ID>/transaction, thì hãy đặt các câu hỏi
+  - Nếu thay đổi ID này nó có ra thông tin người khác không?
+  - ID này có thể xem được ở các mức độ phân quyền khác nhau không?
+
+## **_4. Kinh nghiệm test_**
+- Sử dụng công cụ Intruder để thực hiện việc fuzzing ID, đừng dùng tay
+- Nếu ID là số, hãy thử các số từ nhỏ cho tới rất lớn, biết đâu có những ID là số lớn ẩn
+- Nếu API có dạng /api/users/info, hãy thử Fuzzing để biết đâu sẽ có những API dạng /api/admins/info
+- /api/v3/ có thể fix lỗi nhưng biết đâu /api/v1/ vẫn còn lỗ hổng
+- Thử thay đổi HTTP Method GET/PUT/POST/DELETE
+- Sử dụng AutoRepeater để tự động cho việc Thay thế giá trị và Gửi Request
+- Sử dụng công cụ AuthMatrix để test các chức năng API có sử dụng nhiều quyền (User, Manager, Admin, ...)
+
+**_5. Phòng chống_**
+- Triển khai Access control và Session Management
+- Không sử dụng Direct Object References
+- Sử dụng GUIDs hoặc Random để tạo ra ID
+- Kiểm tra User Input
+
+**Mở rộng công cụ tìm kiếm**
+- Dirsearch để tìm kiếm file và thư mục
+- Tìm kiếm thư mục nhạy cảm trong Source HTML, JavaScript, Robots.tx
