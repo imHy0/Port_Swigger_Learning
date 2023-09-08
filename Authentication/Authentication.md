@@ -38,9 +38,22 @@ ___
 
 - Bỏ qua xác thực hai yếu tố (lab 7)
 
+Nếu người dùng được nhắc nhập mật khẩu lần đầu tiên, sau đó được nhắc nhập mã xác minh trên một trang riêng, thì người dùng thực sự ở trạng thái "đăng nhập" trước khi họ nhập mã xác minh. Trong trường hợp này, bạn nên kiểm tra xem liệu bạn có thể trực tiếp chuyển sang trang "chỉ đăng nhập" sau khi hoàn thành bước xác thực đầu tiên hay không. Đôi khi, bạn sẽ thấy rằng một trang web không thực sự kiểm tra xem bạn có hoàn thành bước thứ hai trước khi tải trang hay không.
 
-- 
+- Logic xác minh hai yếu tố thiếu sót (lab 8)
+
+Đôi khi logic thiếu sót trong xác thực hai yếu tố có nghĩa là sau khi người dùng hoàn thành bước đăng nhập ban đầu, trang web không xác minh đầy đủ rằng chính người dùng đó đang hoàn thành bước thứ hai.
+
+- Brute forcing mã xác minh 2FA (lab 9) [EXPERT]
+
 [5.3. Lỗ hổng trong các cơ chế xác thực khác](part3.md)
+
+- Keeping users logged in (lab 10, 11)
+
+- Resetting user passwords
+  - using URL (lab 12, 13)
+
+- Changing user passwords (lab 14)
 
 ___
 # ***6. Ngăn chặn***
