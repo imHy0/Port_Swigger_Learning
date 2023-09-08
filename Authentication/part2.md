@@ -30,4 +30,51 @@ solve the lab luôn chứ sao
 
 ![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/ae50ace2-57ec-4290-8f62-dc66bd482979)
 
-##
+## [Lab 8: 2FA broken logic](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic)
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/8fd0fa78-9848-4196-a0b3-e6481dbe2af9)
+
+login
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/d1fd9e46-5e90-44ec-9584-82c87ad51cba)
+
+phải nhập code
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/a65be9f4-7428-4d25-9a79-7a32a2a1b776)
+
+chú ý request có xác nhận username
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/1133f443-a12a-4de8-8a33-0c6fb53e3f42)
+
+vào gmail lấy code
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/75f699c6-975a-4879-9d7f-31284fe81d13)
+
+nhập code và login thành công, redirect sang `/my-account?id=wiener`
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/d7cecaf9-c1bf-4be3-a40e-a2374890c19e)
+
+nhập mã code cũng verify
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/646e9355-1849-4d46-8944-c5b118de4e82)
+
+nhớ logout `wiener` trước khi test
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/4dc799cd-cffa-4ea9-b453-9cb8b9b5b3a0)
+
+send request get login2 của account `carlos` để lấy mã code
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/3f86342f-7c2a-42fe-8fdb-15f1b1286ee2)
+
+sau khi đã có code gửi về mail, chắc chắn là ta không có mail để lấy rồi, brute force thôi
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/d1fb0d7c-baa4-4c8f-8505-f543d9701445)
+
+ok đã tìm được code
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/cd2395d5-6a1b-4315-9522-0557bdb101b0)
+
+login và solve thôi
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/6480ff10-bd77-4620-8e27-3e4ef56c0e22)
+
+![image](https://github.com/imHy0/Port_Swigger_Learning/assets/88024759/d0d96db0-20f0-4185-b277-b2b6c3192823)
