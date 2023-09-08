@@ -4,7 +4,7 @@
 Completed 16/18 labs
 ___
 ### [**2. Authentication (14 labs)**](/Authentication)
-
+Completed 13/14 labs
 ___
 ### [**3. Directory Traversal (6 labs)**](/Directory%20Traversal)
 
