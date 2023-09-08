@@ -7,13 +7,13 @@ ___
 Completed 13/14 labs
 ___
 ### [**3. Directory Traversal (6 labs)**](/Directory%20Traversal)
-
+Completed all labs
 ___
 ### [**4. Command Injection (5 labs)**](/Command%20Injection)
 Completed all labs
 ___
 ### [**5. Business logic vulnerabilities (11 labs)**](/Business%20Logic%20Vulnerabilities)
-
+Pending
 ___
 ### [**6. Information Disclosure (5 labs)**](/Information%20Disclosure)
 Completed all labs
