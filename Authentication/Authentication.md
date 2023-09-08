@@ -22,20 +22,24 @@ ___
 - Brute-force Attacks
   - brute-forcing usernames → tên người dùng dễ đoán, phổ biến
   - brute-forcing passwords → mật khẩu yếu, dễ đoán, phổ biến
-  - username enumeration:
+  - username enumeration: (lab 1, 2, 3)
     - Status codes
     - Error messages
     - Response times
-  - Flawed brute-force protection
+  - Flawed brute-force protection (lab 4)
     - 2 cách phổ biến ngăn chặn brute-force
       - khóa tài khoản mà người dùng từ xa đang cố đăng nhập quá nhiều lần không thành công
       - chặn địa chỉ IP của người dùng từ xa nếu thực hiện nhiều lần liên tục
-    - Account locking
-    - User rate limiting
+    - Account locking (lab 5)
+    - User rate limiting (lab 6)
 - HTTP basic authentication
 
 [5.2. Lỗ hổng trong xác thực đa yếu tố](part2.md)
 
+- Bỏ qua xác thực hai yếu tố (lab 7)
+
+
+- 
 [5.3. Lỗ hổng trong các cơ chế xác thực khác](part3.md)
 
 ___
