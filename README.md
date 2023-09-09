@@ -24,6 +24,9 @@ ___
 ### [**8. File Upload Vulnerabilities (7 labs)**](./File%20Upload%20Vulnerabilities)
 Completed 6/7 labs
 ___
+### [**10. Server-side request forgery (SSRF) (7 labs)**](./Server-side%20request%20forgery%20(SSRF))
+Completed 5/7 labs
+___
 ### [**11. XXE Injection (9 labs)**](./XXE%20Injection)
 Completed 8/9 labs
 ___
